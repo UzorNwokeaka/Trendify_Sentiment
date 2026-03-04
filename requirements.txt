@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+nltk
+spacy
+langdetect
+matplotlib
+seaborn
+plotly
+streamlit
+tensorflow
+transformers
