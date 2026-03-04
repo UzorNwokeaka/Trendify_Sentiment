@@ -10,3 +10,5 @@ plotly
 streamlit
 tensorflow
 transformers
+ftfy
+emoji
