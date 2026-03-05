@@ -1,4 +1,4 @@
-# creating Tokenization & Lemmatization scripts
+# This script creates Tokenization & Lemmatization
 import os
 import argparse
 import pandas as pd
