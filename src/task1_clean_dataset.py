@@ -36,7 +36,7 @@ def main(input_path: str, output_path: str):
     else:
         raise ValueError("Output must end with .parquet or .csv")
 
-    print(f"✅ Cleaned dataset saved to: {output_path}")
+    print(f"Cleaned dataset saved to: {output_path}")
     print(f"Rows: {len(df):,} | Columns: {df.shape[1]}")
     print("\nSample cleaned reviews:")
     print(df[["review", "review_clean"]].head(5).to_string(index=False))
