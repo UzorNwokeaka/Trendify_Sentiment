@@ -40,11 +40,11 @@ def main(input_path: str, output_path: str, text_col: str, batch_size: int, n_pr
     if text_col not in df.columns:
         raise ValueError(f"Column '{text_col}' not found. Available columns: {list(df.columns)}")
 
-    # Load spaCy model; disable components we don't need to speed things up.
+    # Load spaCy model; disable components as we don't need to speed things up.
     # We only need the tokenizer + lemmatizer.
     nlp = spacy.load("en_core_web_sm", disable=["ner", "parser", "textcat"])
 
-    # Further speed: if your spaCy version supports it, keep only required parts
+    # Further speed: if spaCy version supports it, keep only required parts
     # (en_core_web_sm includes tagger/attribute_ruler/lemmatizer)
     print("Tokenizing and lemmatizing text (fast nlp.pipe)...")
 
@@ -59,7 +59,7 @@ def main(input_path: str, output_path: str, text_col: str, batch_size: int, n_pr
 
     # Save as CSV
     df.to_csv(output_path, index=False, encoding="utf-8")
-    print(f"✅ Lemmatized dataset saved to: {output_path}")
+    print(f"Lemmatized dataset saved to: {output_path}")
     print(df[[text_col, "review_lemma"]].head(5).to_string(index=False))
 
 
