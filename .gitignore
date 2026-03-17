@@ -32,3 +32,22 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Virtual environment
+.venv/
+
+# Data
+data/raw/
+data/interim/
+data/processed/
+
+# Model artifacts
+artifacts/
+*.joblib
+*.pkl
+*.pt
+*.h5
+*.safetensors
+
+# Jupyter
+.ipynb_checkpoints/
